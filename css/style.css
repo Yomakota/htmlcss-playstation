@@ -1,3 +1,8 @@
-h1 {
-    color: red;
+:root {
+    --logo-bg: #000000;
 }
+
+.bg-black {
+    background-color: var(--logo-bg);
+}
+
