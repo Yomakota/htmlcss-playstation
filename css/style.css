@@ -5,4 +5,32 @@
 .bg-black {
     background-color: var(--logo-bg);
 }
+.dropdown-toggle::after {
+    display: none;
+}
+
+.nav-link .icon-dropdown {
+    width: 10px;
+    vertical-align: middle;
+}
+
+.nav-link .icon-dropdown.blue {
+    display: none;
+    position: absolute;
+    top:40%;
+    right:14%;
+}
+
+.nav-link.dropdown-toggle {
+    position: relative;
+}
+
+.nav-link.dropdown-toggle:focus .icon-dropdown.blue {
+    display: block;
+}
+
+.search button img {
+    width: 30px;
+}
+
 
