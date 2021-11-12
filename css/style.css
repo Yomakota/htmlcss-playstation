@@ -5,32 +5,37 @@
 .bg-black {
     background-color: var(--logo-bg);
 }
+
+.header-bottom .dropdown .list-inline-item img {
+    width: 5em;
+}
+
 .dropdown-toggle::after {
-    display: none;
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0;
+    font-family: "Font Awesome 6 Free"; 
+    font-weight: 900; 
+    content: "\f078";
+    border-top:  0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
 }
 
-.nav-link .icon-dropdown {
-    width: 10px;
-    vertical-align: middle;
-}
-
-.nav-link .icon-dropdown.blue {
-    display: none;
-    position: absolute;
-    top:40%;
-    right:14%;
-}
-
-.nav-link.dropdown-toggle {
-    position: relative;
-}
-
-.nav-link.dropdown-toggle:focus .icon-dropdown.blue {
-    display: block;
-}
-
-.search button img {
-    width: 30px;
+.dropdown-toggle:focus:after {
+    color: blue;
+    transform: rotate(180deg);
 }
 
 
+@media screen and (min-width: 992px) {
+
+    .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+    }
+    .navbar-nav li a img {
+        width: 50%;
+    }
+}
