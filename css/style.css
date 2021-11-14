@@ -45,6 +45,18 @@ body {
     width:10%;
 }
 
+.w-20 {
+    width: 20%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-35 {
+    width: 35%;
+}
+
 /* HEADER */
 
 /* HEADER-BOTTOM */
@@ -97,7 +109,7 @@ body {
 }
 
 .jumbotron .container-fluid .row.banner-bg .banner-content img {
-    width: 15em;
+    width: 50%;
 }
 
 .jumbotron .container-fluid .row.banner-bg .jumbo-content .btn {
@@ -113,9 +125,7 @@ body {
 
 /* HARDWARE-SLIDERS */
 
-.hardware-sliders .container .row .hard-sliders:hover img {
-    border-bottom: 1px solid blue;
-}
+
 
 /* MAIN-GAME */
 
@@ -139,24 +149,24 @@ body {
 
 /* NEW-GAMES */
 
-.new-games .container {
+.new-games .container-fluid {
     background-color: var(--bg-new-game);
     color: white;
 }
 
-.new-games .container .new-games-text {
+.new-games .container-fluid .new-games-text {
     font-size: .9em;
 }
 
 /* SECTION-PS4 */
 
-.playstation-plus .container {
+.playstation-plus .container-fluid {
     background-color: var(--bg-play-4);
 }
 
 /* SECTION-PS-NOW */
 
-.ps-now .container {
+.ps-now .container-fluid {
     background-color: var(--bg-ps-now);
     color: white;
 }
@@ -168,7 +178,7 @@ body {
 
 /* FOOTER */
 
-footer.container {
+footer.container-fluid {
     background-color: var(--bg-footer);
     color: white;
 }
@@ -201,5 +211,11 @@ footer .footer-bottom .link-copyright a {
 
      .navbar-nav li a img {
         display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hardware-sliders .container-fluid .row {
+        justify-content: center;
     }
 }
