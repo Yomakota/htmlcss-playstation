@@ -1,13 +1,46 @@
+/* COMMONS */
+
+body {
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 :root {
     --logo-bg: #000000;
+    --jumbo-btn: #CD3D0E;
+    --text-color: #858585;
+    --bg-new-game: #1F1F1F;
 }
 
 .bg-black {
     background-color: var(--logo-bg);
 }
 
+.pt-6 {
+    padding-top: 12rem;
+}
+
+.rounded-6 {
+  border-radius: 1.25rem;
+}
+
+.fs-big {
+    font-size: 2.3em;
+}
+
+/* HEADER */
+
+/* HEADER-BOTTOM */
 .header-bottom .dropdown .list-inline-item img {
     width: 5em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: blue;
 }
 
 .dropdown-toggle::after {
@@ -28,14 +61,90 @@
     transform: rotate(180deg);
 }
 
+.navbar-nav li form #search {
+    background-image: url(../img/lens.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
-@media screen and (min-width: 992px) {
+/* JUMBOTRON */
 
-    .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
-    align-items: center;
+.jumbotron .container-fluid .row.banner-bg {
+    display: flex;
+    align-items: flex-end;
+    background-image: url(../img/jumbo-bg.png) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.jumbotron .container-fluid .row.banner-bg .col-12.banner-content img {
+    width: 15em;
+}
+
+.jumbotron .container-fluid .row.banner-bg .col-12.jumbo-content .btn {
+    background-color: var(--jumbo-btn);
+}
+
+/* HARDWARE */
+
+.hardware .container .row .col-12 .strapline {
+    font-size: .8em;
+    color: #75B2E4;
+}
+
+.hardware .container .row .col-12 .slogan {
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+/* HARDWARE-SLIDERS */
+
+.hardware-sliders .container .row .col-4:hover img {
+    border-bottom: 1px solid blue;
+}
+
+/* MAIN-GAME */
+
+.main-game .container-fluid .row.banner-bg {
+    display: flex;
+    align-items: flex-end;
+    background-image: url(../img/it-takes-two-hero-banner-desktop.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.main-game .container-fluid .row.banner-bg .col-12.banner-content img {
+    width: 15em;
+}
+
+.main-game .container-fluid .row.banner-bg .col-12.jumbo-content .btn {
+    background-color: var(--jumbo-btn);
+}
+
+/* NEW-GAMES */
+
+.new-games .container {
+    background-color: var(--bg-new-game);
+    color: white;
+}
+
+/* MEDIA-QUERY */
+
+@media screen and (max-width: 992px) {
+
+    .navbar-nav {
+        display: block;
     }
-    .navbar-nav li a img {
+    
+    .btn.btn-dark.rounded-pill {
         width: 50%;
+    }
+
+     .navbar-nav li a img {
+        display: none;
     }
 }
