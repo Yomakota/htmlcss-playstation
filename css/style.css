@@ -10,10 +10,18 @@ body {
     --jumbo-btn: #CD3D0E;
     --text-color: #858585;
     --bg-new-game: #1F1F1F;
+    --bg-play-4: #BEBCBB;
+    --bg-ps-now: #161C3B;
+    --bg-footer: #00439C;
 }
 
 .bg-black {
     background-color: var(--logo-bg);
+}
+
+.sub-title {
+    font-size: 1.2em;
+    color: var(--text-color);
 }
 
 .pt-6 {
@@ -26,6 +34,15 @@ body {
 
 .fs-big {
     font-size: 2.3em;
+}
+
+.btn.btn-ps {
+    background-color: #D9DADC;
+    color: blue;
+}
+
+.w-10 {
+    width:10%;
 }
 
 /* HEADER */
@@ -79,29 +96,24 @@ body {
     color: white;
 }
 
-.jumbotron .container-fluid .row.banner-bg .col-12.banner-content img {
+.jumbotron .container-fluid .row.banner-bg .banner-content img {
     width: 15em;
 }
 
-.jumbotron .container-fluid .row.banner-bg .col-12.jumbo-content .btn {
+.jumbotron .container-fluid .row.banner-bg .jumbo-content .btn {
     background-color: var(--jumbo-btn);
 }
 
 /* HARDWARE */
 
-.hardware .container .row .col-12 .strapline {
+.hardware .container .row .strapline {
     font-size: .8em;
     color: #75B2E4;
 }
 
-.hardware .container .row .col-12 .slogan {
-    font-size: 1.2em;
-    color: var(--text-color);
-}
-
 /* HARDWARE-SLIDERS */
 
-.hardware-sliders .container .row .col-4:hover img {
+.hardware-sliders .container .row .hard-sliders:hover img {
     border-bottom: 1px solid blue;
 }
 
@@ -117,11 +129,11 @@ body {
     color: white;
 }
 
-.main-game .container-fluid .row.banner-bg .col-12.banner-content img {
+.main-game .container-fluid .row.banner-bg .banner-content img {
     width: 15em;
 }
 
-.main-game .container-fluid .row.banner-bg .col-12.jumbo-content .btn {
+.main-game .container-fluid .row.banner-bg .jumbo-content .btn {
     background-color: var(--jumbo-btn);
 }
 
@@ -129,6 +141,49 @@ body {
 
 .new-games .container {
     background-color: var(--bg-new-game);
+    color: white;
+}
+
+.new-games .container .new-games-text {
+    font-size: .9em;
+}
+
+/* SECTION-PS4 */
+
+.playstation-plus .container {
+    background-color: var(--bg-play-4);
+}
+
+/* SECTION-PS-NOW */
+
+.ps-now .container {
+    background-color: var(--bg-ps-now);
+    color: white;
+}
+
+.ps-now .btn.btn-ps {
+    background-color: white;
+    color: blue;
+}
+
+/* FOOTER */
+
+footer.container {
+    background-color: var(--bg-footer);
+    color: white;
+}
+
+footer .footer-top ul li {
+    list-style-type: none;
+}
+
+
+footer .footer-top ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-bottom .link-copyright a {
     color: white;
 }
 
