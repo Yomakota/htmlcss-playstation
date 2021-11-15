@@ -57,9 +57,12 @@ body {
     width: 35%;
 }
 
-/* HEADER */
-
 /* HEADER-BOTTOM */
+
+header .header-bottom {
+    background-color: white;
+} 
+
 .header-bottom .dropdown .list-inline-item img {
     width: 5em;
 }
@@ -116,16 +119,25 @@ body {
     background-color: var(--jumbo-btn);
 }
 
-/* HARDWARE */
+/* JUMBO-SLIDERS */
 
-.hardware .container .row .strapline {
-    font-size: .8em;
-    color: #75B2E4;
+.sliders .container .row .sliders:hover {
+    transform: translateY(-1em);
+}
+
+.sliders .container .row .sliders .img-thumbnail {
+    border: 1px solid blue;
 }
 
 /* HARDWARE-SLIDERS */
 
+.hardware-sliders .container-fluid .row .hard-sliders img {
+    opacity: .7;
+}
 
+.hardware-sliders .container-fluid .row .hard-sliders:hover img {
+    opacity: 1;
+}
 
 /* MAIN-GAME */
 
@@ -215,7 +227,8 @@ footer .footer-bottom .link-copyright a {
 }
 
 @media screen and (min-width: 768px) {
+
     .hardware-sliders .container-fluid .row {
-        justify-content: center;
+        justify-content: space-around;
     }
 }
