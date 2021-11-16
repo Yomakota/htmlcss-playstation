@@ -157,6 +157,10 @@ header .header-bottom .navbar .navbar-brand img {
 
 /* JUMBO-SLIDERS */
 
+.jumbotron .jumbo-sliders .row .sliders {
+    transition: .5s ease-out;
+}
+
 .jumbotron .jumbo-sliders .row .sliders:hover {
     transform: translateY(-1em);
 }
