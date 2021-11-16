@@ -36,19 +36,6 @@ body {
     font-size: 2.3em;
 }
 
-.btn.btn-ps {
-    background-color: #D9DADC;
-    color: blue;
-}
-
-.w-10 {
-    width:10%;
-}
-
-.w-20 {
-    width: 20%;
-}
-
 .w-30 {
     width: 30%;
 }
@@ -57,30 +44,61 @@ body {
     width: 35%;
 }
 
+a:hover{
+    box-shadow:0 0 0 2px white inset;
+}
+
+.black-shadow:hover {
+    box-shadow: 0 0 0 2px inset black;
+}
+
+/* HEADER-TOP */
+
+.header-top .logo-header {
+    width: 100px;
+}
+
 /* HEADER-BOTTOM */
 
 header .header-bottom {
     background-color: white;
 } 
 
-.header-bottom .dropdown .list-inline-item img {
-    width: 5em;
+header .header-bottom .navbar .navbar-brand img {
+    width: 2em;
 }
 
-.navbar-light .navbar-nav .nav-link {
+.header-bottom .dropdown .list-inline-item img {
+    width: 5em; 
+}
+
+.header-bottom .navbar-light .navbar-nav .nav-link {
     color: black;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-    color: blue;
+.header-bottom .navbar-light .navbar-nav .nav-link:hover {
+    color: lightblue;
+}
+
+.header-bottom .navbar .navbar-nav .dropdown-menu .list-inline-item.top:hover a {
+    box-shadow: 1px 1px 1px 1px grey;
+    background-color: transparent;
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: 0;
+    margin-top: 0;
 }
 
 .dropdown-toggle::after {
     display: inline-block;
-    margin-left: 0.255em;
+    margin-left: 0.5em;
     vertical-align: 0;
     font-family: "Font Awesome 6 Free"; 
-    font-weight: 900; 
+    font-weight: 900;
+    font-size: .9em; 
+    color: var(--text-color);
     content: "\f078";
     border-top:  0;
     border-right: 0;
@@ -89,11 +107,29 @@ header .header-bottom {
 }
 
 .dropdown-toggle:focus:after {
-    color: blue;
+    color: lightblue;
     transform: rotate(180deg);
 }
 
-.navbar-nav li form #search {
+.dropdown-menu li.pointed:hover a {
+    background-color: transparent;
+}
+
+.dropdown-menu .pointed i {
+    font-size: .3em;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.dropdown-menu li.pointed:hover a {
+    color: lightblue;
+}
+
+.dropdown-menu .pointed i:hover {
+    color: lightblue;
+}
+
+.header-bottom .navbar-nav li form #search {
     background-image: url(../img/lens.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -101,18 +137,18 @@ header .header-bottom {
 
 /* JUMBOTRON */
 
+.jumbotron .container-fluid {
+    padding-top: 6em;
+}
+
 .jumbotron .container-fluid .row.banner-bg {
     display: flex;
     align-items: flex-end;
-    background-image: url(../img/jumbo-bg.png) ;
-    background-position: center;
+    background-image: url(../img/jumbo-bg.png) ;    
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     color: white;
-}
-
-.jumbotron .container-fluid .row.banner-bg .banner-content img {
-    width: 50%;
 }
 
 .jumbotron .container-fluid .row.banner-bg .jumbo-content .btn {
@@ -121,25 +157,25 @@ header .header-bottom {
 
 /* JUMBO-SLIDERS */
 
-.sliders .container .row .sliders:hover {
+.jumbotron .jumbo-sliders .row .sliders:hover {
     transform: translateY(-1em);
 }
 
-.sliders .container .row .sliders .img-thumbnail {
+.jumbotron .jumbo-sliders .row .sliders .img-thumbnail {
     border: 1px solid blue;
 }
 
 /* HARDWARE-SLIDERS */
 
-.hardware-sliders .container-fluid .row .hard-sliders img {
+.hardware .hardware-sliders .hard-sliders img {
     opacity: .7;
 }
 
-.hardware-sliders .container-fluid .row .hard-sliders:hover img {
+.hardware .hardware-sliders .hard-sliders:hover img {
     opacity: 1;
 }
 
-/* MAIN-GAME */
+/* SECTION-MAIN-GAME */
 
 .main-game .container-fluid .row.banner-bg {
     display: flex;
@@ -159,7 +195,7 @@ header .header-bottom {
     background-color: var(--jumbo-btn);
 }
 
-/* NEW-GAMES */
+/* SECTION-NEW-GAMES */
 
 .new-games .container-fluid {
     background-color: var(--bg-new-game);
@@ -176,6 +212,14 @@ header .header-bottom {
     background-color: var(--bg-play-4);
 }
 
+/* SECTION-PS-PLUS */
+
+.playstation-plus .btn.btn-ps {
+    background-color: #D9DADC;
+    color: blue;
+}
+
+
 /* SECTION-PS-NOW */
 
 .ps-now .container-fluid {
@@ -185,7 +229,6 @@ header .header-bottom {
 
 .ps-now .btn.btn-ps {
     background-color: white;
-    color: blue;
 }
 
 /* FOOTER */
@@ -195,14 +238,29 @@ footer.container-fluid {
     color: white;
 }
 
+footer.container-fluid .logo-footer img {
+    width: 120px;
+}
+
+footer.container-fluid .language img {
+    width: 25px;
+} 
+
 footer .footer-top ul li {
     list-style-type: none;
+    padding-bottom: 1em;
 }
 
 
 footer .footer-top ul li a {
     color: white;
     text-decoration: none;
+}
+
+/* FOOTER-BOTTOM */
+
+.footer-bottom .row img {
+    width: 150px;
 }
 
 footer .footer-bottom .link-copyright a {
@@ -224,11 +282,16 @@ footer .footer-bottom .link-copyright a {
      .navbar-nav li a img {
         display: none;
     }
+
 }
 
 @media screen and (min-width: 768px) {
 
-    .hardware-sliders .container-fluid .row {
-        justify-content: space-around;
+     .hardware .hardware-sliders .row {
+        justify-content: space-between;
+    }
+
+    .hardware .hardware-sliders .row img {
+        width: 75%!important;
     }
 }
